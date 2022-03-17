@@ -68,6 +68,7 @@ html {
   /* scrollbar style in firefox */
   scrollbar-width: thin;
   scrollbar-color: var(--Primary-Lime-Green) var(--Neutral-Light-Grayish-Blue);
+  overflow-x: hidden;
 }
 
 body {
@@ -563,9 +564,10 @@ header {
     display: none !important;
   }
   /* stop scrolling when enu open */
-  body.noscroll {
-    overflow: hidden;
+  :is(body, html).noscroll {
+    overflow-y: hidden;
   }
+
   /* header for mobile view */
   .header,
   .header .container {
